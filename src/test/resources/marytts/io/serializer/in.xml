@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<maryxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.5" xml:lang="en-US" xmlns="http://mary.dfki.de/2002/MaryXML">
+  <p>Hello, how is it going ?
+  <s>Hello, how is it going ?
+    <t pos="UH">Hello<syllable stress="0">
+    <ph p="h"/>
+    <ph p="@"/>
+  </syllable>
+  <syllable stress="1">
+    <ph p="l"/>
+    <ph p="@U"/>
+  </syllable>
+    </t>
+    <t pos=",">,</t>
+    <t pos="WRB">how<syllable stress="1">
+    <ph p="h"/>
+    <ph p="aU"/>
+  </syllable>
+    </t>
+    <t pos="VBZ">is<syllable stress="1">
+    <ph p="I"/>
+    <ph p="z"/>
+  </syllable>
+    </t>
+    <t pos="PRP">it<syllable stress="1">
+    <ph p="I"/>
+    <ph p="t"/>
+  </syllable>
+    </t>
+    <t pos="VBG">going<syllable stress="1">
+    <ph p="g"/>
+    <ph p="@U"/>
+  </syllable>
+  <syllable stress="0">
+    <ph p="I"/>
+    <ph p="N"/>
+  </syllable>
+    </t>
+    <t pos=".">?</t>
+  </s>
+  </p>
+</maryxml>
