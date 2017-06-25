@@ -1,3 +1,6 @@
-# Cache
+# Gradle
 .gradle/
+build/
+
+# Emacs
 .meghanada/
