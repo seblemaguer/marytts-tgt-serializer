@@ -20,11 +20,17 @@ import org.testng.annotations.*;
  */
 public class MaryTextGridSerializerTest {
     @Test
-    public void testLoadingTextGridWithoutException() throws Exception {
-        String testResourceName = "in.xml";
+    public void checkBaselineExample() throws Exception {
+
+	// Load XML
+        String testResourceName = "baseline_example.xml";
         InputStream input = this.getClass().getResourceAsStream(testResourceName);
         String string_xml = new Scanner(input, "UTF-8").useDelimiter("\\A").next();
 
+	// Load TextGrid
+        testResourceName = "baseline_example.TextGrid";
+        input = this.getClass().getResourceAsStream(testResourceName);
+        String string_actual_tg = new Scanner(input, "UTF-8").useDelimiter("\\A").next();
 
         try {
             XMLSerializer xml_ser = new XMLSerializer();
@@ -32,9 +38,8 @@ public class MaryTextGridSerializerTest {
 
 
             MaryTextGridSerializer tg_ser = new MaryTextGridSerializer();
-            String string_tg = tg_ser.toString(utt);
-            System.out.println(string_tg);
-            Assert.assertEquals(1, 2);
+            String string_expected_tg = tg_ser.toString(utt);
+            Assert.assertEquals(string_expected_tg, string_actual_tg);
         } catch (MaryIOException ex) {
             if (ex.getEmbeddedException() != null) {
                 throw ex.getEmbeddedException();
