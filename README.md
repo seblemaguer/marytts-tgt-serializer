@@ -1,5 +1,5 @@
-[comment]: <> ([![Build Status](https://travis-ci.org/marytts/marytts-tgt-serializer.svg?branch=master)](https://travis-ci.org/marytts/marytts-tgt-serializer))
-[comment]: <> ([![Bintray](https://img.shields.io/bintray/v/marytts/maven/marytts-tgt-serializer.svg)](https://bintray.com/marytts/maven/marytts-tgt-serializer))
+[![Build Status](https://travis-ci.org/marytts/marytts-tgt-serializer.svg?branch=master)](https://travis-ci.org/marytts/marytts-tgt-serializer)
+[![Bintray](https://img.shields.io/bintray/v/marytts/maven/marytts-tgt-serializer.svg)](https://bintray.com/marytts/maven/marytts-tgt-serializer)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](http://www.gnu.org/licenses/lgpl-3.0)
 
 # MaryTTS TextGrid serializer
@@ -35,4 +35,27 @@ repositories {
 dependencies {
   compile group: 'de.dfki.marytts', name:'marytts-tgt-serializer', version: '0.5'
 }
+```
+
+## How to use it
+
+**The artefact should be in the classpath** !
+
+Then to use it, you simply have to specify a configuration based on it like, for example, the following one:
+```properties
+# How to extract the input
+input_serializer=marytts.io.serializer.TextSerializer
+
+# How to render the output
+output_serializer=marytts.io.serializer.MaryTextGridSerializer
+
+# Current locale
+locale=en_US
+
+# List of modules
+modules=marytts.language.en.Preprocess       \
+        marytts.language.en.JTokenizer       \
+        marytts.modules.nlp.OpenNLPPosTagger \
+        marytts.modules.nlp.JPhonemiser
+
 ```
