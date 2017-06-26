@@ -6,6 +6,8 @@
 
 The MaryTTS TextGrid serializer is an artefact compatible with MaryTTS (>= 6.x) to export/import TextGrid file into the MaryTTS system. It is using JTGT as a TextGrid backend conversion: https://github.com/hbuschme/TextGridTools
 
+**As duration is not supported yet in the main marytts part, all durations are set to 1s for the visualization purpose**
+
 ## Adding the MaryTTS TextGrid serializer to your dependencies
 
 To declare a depency on the MaryTTS TextGrid serializer you can do it:
